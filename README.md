@@ -1,4 +1,10 @@
-# MyFirstApp
+# MyFirstApp-
+
+This Applicaton is about Create, Read, Update and Delete the data in the server. I've created a JSON file and used JSON server REST API service to perform the CRUD operation.
+
+Other than CRUD, Login with Angular Router Guard, A custom Pipe for Search bar, Router for Navigation, Both Data-binding, Menubar for the App, and also have Used material.io desings for some components.
+
+The components are Login, registerforms, Update, view, header and Welcome.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
