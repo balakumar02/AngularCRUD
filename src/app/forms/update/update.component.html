@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="heading"><h1>Update form</h1></div>
+  <div class="Register-form">
+    <form [formGroup]="updateform" (ngSubmit)="updateData(updateform)">
+      <div class="form-group">
+        <label>User Id</label>
+        <input
+          type="text"
+          placeholder="Enter your User Id"
+          formControlName="userid"
+        />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="Enter your Password"
+          formControlName="password"
+        />
+      </div>
+      <div class="form-group">
+        <label>Display Name</label>
+        <input
+          type="text"
+          placeholder="Enter your Display name"
+          formControlName="dpname"
+        />
+      </div>
+      <div class="form-group">
+        <label>Email ID</label>
+        <input
+          type="email"
+          placeholder="Enter your Email"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-group">
+        <label>Phone number</label>
+        <input
+          type="text"
+          pattern="[0-9]"
+          minlength="10"
+          maxlength="10"
+          placeholder="Enter your phonenumber name"
+          formControlName="phonenumber"
+        />
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input
+          type="text"
+          pattern="[0-9]"
+          placeholder="Enter your age"
+          formControlName="age"
+        />
+      </div>
+      <div class="form-group">
+        <label>First Name</label>
+        <input
+          type="text"
+          placeholder="Enter your First name"
+          formControlName="fname"
+        />
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input
+          type="text"
+          placeholder="Enter your Last name"
+          formControlName="lname"
+        />
+      </div>
+      <div class="example-button-row">
+        <button type="submit" mat-raised-button color="primary">Update</button>
+      </div>
+    </form>
+  </div>
+</div>

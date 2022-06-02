@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div id="filter" class="search">
+      <input
+        type="text"
+        id="search"
+        name="search"
+        [(ngModel)]="search"
+        placeholder="search with userid"
+      />
+    </div>
+  </div>
+  <table class="table" id="table">
+    <thead>
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Display name</th>
+        <th scope="col">Email Id</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Age</th>
+        <th scope="col">FIrst Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delte</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of viewdata | filter: search; let i = index">
+      <tr>
+        <th>{{ i + 1 }}</th>
+        <td>{{ data.userid }}</td>
+        <td>{{ data.dpname }}</td>
+        <td>{{ data.email }}</td>
+        <td>{{ data.phonenumber }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.fname }}</td>
+        <td>{{ data.lname }}</td>
+        <td>
+          <mat-icon
+            class="example-icon"
+            aria-hidden="false"
+            aria-label="Example edit icon"
+            routerLink="/update/{{ data.id }}"
+            >edit</mat-icon
+          >
+        </td>
+        <td>
+          <mat-icon
+            class="example-icon"
+            aria-hidden="false"
+            aria-label="Example delete icon"
+            ><span (click)="deleteData(data.id)">delete</span></mat-icon
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

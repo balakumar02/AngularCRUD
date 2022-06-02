@@ -1,0 +1,29 @@
+[
+	{
+		
+		"userid": "Bala",
+		"password": "12345678",
+		"auserid": "Bala",
+		"apassword": "12345678"
+	},
+	{
+		"userid": "user",
+		"password": "user@123"
+	},
+	{
+		"userid": "user2",
+		"password": "user2@123"
+	},
+    {
+		"userid": "Bala2",
+		"password": "012345678"
+	},
+	{
+		"userid": "user3",
+		"password": "user3@1234"
+	},
+	{
+		"userid": "user4",
+		"password": "user4@1232"
+	}
+]

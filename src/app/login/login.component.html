@@ -1,0 +1,61 @@
+<div class="Login-form">
+  <div class="container">
+    <div class="heading"><h1>Login</h1></div>
+
+    <form #myloginform="ngForm" (ngSubmit)="onsubmit(myloginform)">
+      <div class="form-group">
+        <label for="userName">UserName:</label>
+        <input
+          ngModel
+          type="text"
+          id="userName"
+          name="userName"
+          placeholder="Enter your Display Name "
+          minlength="4"
+          required
+          #userName="ngModel"
+        />
+      </div>
+      <small *ngIf="!userName.valid && userName.errors && userName.touched"
+        ><span [ngStyle]="{ color: 'red' }"> Username not valid</span></small
+      >
+      <small *ngIf="userName.valid"
+        ><span [ngStyle]="{ color: 'green' }"> A good name </span></small
+      >
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          ngModel
+          required
+          name="password"
+          type="password"
+          id="password"
+          placeholder="Enter your Password"
+          minlength="8"
+          #pass="ngModel"
+        />
+        <small *ngIf="!pass.valid && pass.errors && pass.touched"
+          ><span [ngStyle]="{ color: 'red' }"
+            >password will be atleast 8 characters
+          </span></small
+        >
+      </div>
+      <h1>{{ error }}</h1>
+      <section>
+        <div class="example-button-row">
+          <button
+            type="submit"
+            [disabled]="!myloginform.valid"
+            mat-raised-button
+            color="primary"
+          >
+            Login
+          </button>
+          <!-- <button mat-raised-button color="accent" [routerLink]="['register']">
+            Register
+          </button> -->
+        </div>
+      </section>
+    </form>
+  </div>
+</div>

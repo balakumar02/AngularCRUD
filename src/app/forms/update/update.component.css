@@ -1,0 +1,22 @@
+.heading {
+  text-align: center;
+}
+
+.Register-form {
+  text-align: center;
+}
+
+.Register-form label {
+  color: blue;
+  margin: auto;
+  padding: 8px;
+}
+.Register-form input {
+  margin: 2px;
+  padding: 8px;
+}
+.container {
+  display: grid;
+  border: 2px solid blue;
+  margin: auto;
+}
